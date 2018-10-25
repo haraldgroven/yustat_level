@@ -1,0 +1,27 @@
+---
+title: "utdanningsnivå"
+author: "Harald groven"
+date: "10/25/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+```{r}
+utdanningsniva_styrk08 <- read.delim(
+  "data/x_utdanning_utdanningsniva_styrk08.tsv", 
+  encoding="UTF-8", 
+  na.strings="NULL", 
+  # unngå å få styrk-koder konvertert til tall 
+  colClasses=c("character", "character","character")
+  )
+```
+
+```{r}
+View(utdanningsniva_styrk08)
+```
+
